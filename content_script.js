@@ -29,7 +29,8 @@ function attachScript(resp) {
 
 chromeStorageGet({
     use6Channels: true,
-    setMaxBitrate: true
+    setMaxBitrate: true,
+    disableVP9: false,
 }).then(items => {
     // very messy workaround for accessing chrome storage outside of background / content scripts
     let mainScript = document.createElement('script');
