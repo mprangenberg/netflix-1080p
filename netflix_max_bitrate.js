@@ -36,22 +36,23 @@ function maxbitrate_set() {
     return true;
 }
 
-function maxbitrate_hide() {
+function maxbitrate_hide(attempts) {
+    // console.log("hide");
     const overrideButton = getElementByXPath("//button[text()='Override']");
 
     if (overrideButton) {
         overrideButton.click();
-    } else {
-        setTimeout(maxbitrate_hide, 100);
+    } else if (attempts > 0) {
+        setTimeout(() => maxbitrate_hide(attempts - 1), 200);
     }
 }
 
 function maxbitrate_run() {
-    console.log("run");
+    // console.log("run");
     if (!maxbitrate_set()) {
         setTimeout(maxbitrate_run, 100);
     } else {
-        maxbitrate_hide();
+        maxbitrate_hide(10);
     }
 }
 
@@ -65,7 +66,7 @@ if(globalOptions.setMaxBitrate) {
         let newLocation = window.location.toString();
 
         if (newLocation !== oldLocation) {
-            console.log("detected navigation");
+            // console.log("detected navigation");
 
             oldLocation = newLocation;
             if (WATCH_REGEXP.test(newLocation)) {
