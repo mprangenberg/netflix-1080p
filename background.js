@@ -7,7 +7,7 @@ chrome.webRequest.onBeforeRequest.addListener(
         urls: [
             "*://assets.nflxext.com/*/ffe/player/html/*",
             "*://www.assets.nflxext.com/*/ffe/player/html/*",
-            "*://occ-weba-h2.a.nflxso.net/sec/*/ffe/player/html/*",
+            "*://*.a.nflxso.net/sec/*/ffe/player/html/*",
         ]
     }, ["blocking"]
 );

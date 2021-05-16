@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Netflix 1080p",
   "description": "Forces 1080p and 5.1 playback for Netflix.",
-  "version": "1.24.0",
+  "version": "1.24.1",
   "author": "truedread, jangxx",
   "browser_action": {
     "default_icon": "img/icon128.png"
@@ -15,7 +15,7 @@
     "matches": [
       "*://assets.nflxext.com/*/ffe/player/html/*",
       "*://www.assets.nflxext.com/*/ffe/player/html/*",
-      "*://occ-weba-h2.a.nflxso.net/sec/*/ffe/player/html/*",
+      "*://*.a.nflxso.net/sec/*/ffe/player/html/*",
       "*://netflix.com/*",
       "*://www.netflix.com/*"
     ],
@@ -40,7 +40,7 @@
     "webRequestBlocking",
     "*://assets.nflxext.com/*/ffe/player/html/*",
     "*://www.assets.nflxext.com/*/ffe/player/html/*",
-    "*://occ-weba-h2.a.nflxso.net/sec/*/ffe/player/html/*",
+    "*://*.a.nflxso.net/sec/*/ffe/player/html/*",
     "*://netflix.com/*",
     "*://www.netflix.com/*"
   ]
