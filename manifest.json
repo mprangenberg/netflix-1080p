@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Netflix 1080p",
   "description": "Forces 1080p and 5.1 playback for Netflix.",
-  "version": "1.24.1",
+  "version": "1.25.0",
   "author": "truedread, jangxx",
   "browser_action": {
     "default_icon": "img/icon128.png"
@@ -32,7 +32,7 @@
   },
   "web_accessible_resources": [
     "netflix_max_bitrate.js",
-    "cadmium-playercore-6.0030.399.911-patched.js"
+    "cadmium-playercore-6.0032.393.911-patched.js"
   ],
   "permissions": [
     "storage",
