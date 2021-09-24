@@ -9,7 +9,7 @@ INCLUDE_FILES = [
     "img/*",
     "pages/*",
     "background.js",
-    "cadmium-playercore-6.0030.399.911-patched.js",
+    "cadmium-playercore-6.0032.393.911-patched.js",
     "content_script.js",
     "manifest.json",
     "netflix_max_bitrate.js",
