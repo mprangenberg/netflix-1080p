@@ -20,6 +20,7 @@
       "*://www.netflix.com/*"
     ],
     "all_frames": true,
+    "css": ["style_fix.css"],
     "js": ["content_script.js"],
     "run_at": "document_start"
   }],
