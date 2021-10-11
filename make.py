@@ -13,6 +13,7 @@ INCLUDE_FILES = [
     "content_script.js",
     "manifest.json",
     "netflix_max_bitrate.js",
+    "style_fix.css",
     "LICENSE",
 ]
 
