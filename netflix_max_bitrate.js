@@ -90,7 +90,15 @@ const WATCH_REGEXP = /netflix.com\/watch\/.*/;
 
 let oldLocation;
 
-if(globalOptions.setMaxBitrate) {
+if (window.globalOptions === undefined) {
+    try {
+        window.globalOptions = JSON.parse(document.getElementById("netflix-1080p-settings").innerText);
+    } catch(e) {
+        console.error("Could not load settings:", e);
+    }
+}
+
+if (window.globalOptions.setMaxBitrate) {
     console.log("netflix_max_bitrate.js enabled");
     setInterval(function () {
         let newLocation = window.location.toString();

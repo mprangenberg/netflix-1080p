@@ -3,12 +3,14 @@ function save_options() {
     const setMaxBitrate = document.getElementById("setMaxBitrate").checked;
     const disableVP9 = document.getElementById("disableVP9").checked;
     const disableAVChigh = document.getElementById("disableAVChigh").checked;
+    const showAllSubs = document.getElementById("showAllSubs").checked;
 
     chrome.storage.sync.set({
         use6Channels,
         setMaxBitrate,
         disableVP9,
         disableAVChigh,
+        showAllSubs,
     }, function() {
         var status = document.getElementById('status');
         status.textContent = 'Options saved.';
@@ -24,6 +26,7 @@ function restore_options() {
         setMaxBitrate: true,
         disableVP9: false,
         disableAVChigh: false,
+        showAllSubs: false,
     }, function(items) {
         document.getElementById("use51").checked = items.use6Channels;
         document.getElementById("setMaxBitrate").checked = items.setMaxBitrate;
