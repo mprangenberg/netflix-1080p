@@ -4,13 +4,13 @@ function getElementByXPath(xpath) {
 
 function maxbitrate_set() {
     window.dispatchEvent(new KeyboardEvent('keydown', {
-        keyCode: 83,
+        keyCode: 66,
         ctrlKey: true,
         altKey: true,
         shiftKey: true,
     }));
 
-    const VIDEO_SELECT = getElementByXPath("//div[text()='Video Bitrate']");
+    const VIDEO_SELECT = getElementByXPath("//div[text()='Video Bitrate / VMAF']");
     const AUDIO_SELECT = getElementByXPath("//div[text()='Audio Bitrate']");
     const BUTTON = getElementByXPath("//button[text()='Override']");
 
