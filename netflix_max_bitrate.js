@@ -4,7 +4,7 @@ function getElementByXPath(xpath) {
 
 function maxbitrate_set() {
     window.dispatchEvent(new KeyboardEvent('keydown', {
-        keyCode: 66,
+        keyCode: 66, // B
         ctrlKey: true,
         altKey: true,
         shiftKey: true,
