@@ -1,5 +1,8 @@
-# netflix-1080p
-Chrome extension to play Netflix in 1080p and 5.1
+![logo](img/icon128.png)
+
+# New Netflix 1080p
+
+Chrome extension to play Netflix in 1080p and 5.1 as well as other QoL improvements.
 
 # Installation
 
