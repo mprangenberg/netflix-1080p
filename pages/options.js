@@ -1,9 +1,17 @@
-function save_options() {
-    const use6Channels = document.getElementById("use51").checked;
-    const setMaxBitrate = document.getElementById("setMaxBitrate").checked;
-    const disableVP9 = document.getElementById("disableVP9").checked;
-    const disableAVChigh = document.getElementById("disableAVChigh").checked;
-    const showAllSubs = document.getElementById("showAllSubs").checked;
+const use6ChannelsCheckbox = document.getElementById("use-51");
+const setMaxBitrateCheckbox = document.getElementById("set-max-bitrate");
+const disableVP9Checkbox = document.getElementById("disable-vp9");
+const disableAVChighCheckbox = document.getElementById("disable-avchigh");
+const showAllSubsCheckbox = document.getElementById("show-all-subs");
+
+const optionsSavedLabel = document.getElementById("options-saved");
+
+function saveOptions() {
+    const use6Channels = use6ChannelsCheckbox.checked;
+    const setMaxBitrate = setMaxBitrateCheckbox.checked;
+    const disableVP9 = disableVP9Checkbox.checked;
+    const disableAVChigh = disableAVChighCheckbox.checked;
+    const showAllSubs = showAllSubsCheckbox.checked;
 
     chrome.storage.sync.set({
         use6Channels,
@@ -12,15 +20,11 @@ function save_options() {
         disableAVChigh,
         showAllSubs,
     }, function() {
-        var status = document.getElementById('status');
-        status.textContent = 'Options saved.';
-        setTimeout(function() {
-            status.textContent = '';
-        }, 750);
+        optionsSavedLabel.style.display = "inline-block";
     });
 }
 
-function restore_options() {
+function restoreOptions() {
     chrome.storage.sync.get({
         use6Channels: true,
         setMaxBitrate: true,
@@ -28,12 +32,19 @@ function restore_options() {
         disableAVChigh: false,
         showAllSubs: false,
     }, function(items) {
-        document.getElementById("use51").checked = items.use6Channels;
-        document.getElementById("setMaxBitrate").checked = items.setMaxBitrate;
-        document.getElementById("disableVP9").checked = items.disableVP9;
-        document.getElementById("disableAVChigh").checked = items.disableAVChigh;
+        use6ChannelsCheckbox.checked = items.use6Channels;
+        setMaxBitrateCheckbox.checked = items.setMaxBitrate;
+        disableVP9Checkbox.checked = items.disableVP9;
+        disableAVChighCheckbox.checked = items.disableAVChigh;
+        showAllSubsCheckbox.checked = items.showAllSubs;
     });
 }
 
-document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click', save_options);
+document.getElementById("save").addEventListener("click", saveOptions);
+use6ChannelsCheckbox.addEventListener("change", () => optionsSavedLabel.style.display = "none");
+setMaxBitrateCheckbox.addEventListener("change", () => optionsSavedLabel.style.display = "none");
+disableVP9Checkbox.addEventListener("change", () => optionsSavedLabel.style.display = "none");
+disableAVChighCheckbox.addEventListener("change", () => optionsSavedLabel.style.display = "none");
+showAllSubsCheckbox.addEventListener("change", () => optionsSavedLabel.style.display = "none");
+
+restoreOptions();

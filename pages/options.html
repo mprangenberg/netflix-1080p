@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>New Netflix 1080p Options</title>
+        <link rel="stylesheet" href="picnic.min.css">
+        <style>
+            html {
+                height: auto;
+            }
 
-<head>
-    <title>Netflix 1080p Options</title>
-</head>
+            body {
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex">
+            <div class="full">
+                <label>
+                    <input type="checkbox" id="use-51" />
+                    <span class="checkable">Use 5.1 audio when available.</span>
+                </label>
+            </div>
+            <div class="full">
+                <label>
+                    <input type="checkbox" id="set-max-bitrate" />
+                    <span class="checkable">Automatically select best bitrate available</span>
+                </label>
+            </div>
+            <div class="full">
+                <label>
+                    <input type="checkbox" id="disable-vp9" />
+                    <span class="checkable">Disable VP9 codec</span>
+                </label>
+            </div>
+            <div class="full">
+                <label>
+                    <input type="checkbox" id="disable-avchigh" />
+                    <span class="checkable">Disable AVChigh codec</span>
+                </label>
+            </div>
+            <div class="full">
+                <label>
+                    <input type="checkbox" id="show-all-subs" />
+                    <span class="checkable">Show all subtitle tracks</span>
+                </label>
+            </div>
+            <div class="full">
+                <button id="save">Save</button>
+                <span id="options-saved" class="label success" style="font-size: 16px; display: none">Options saved!</span>
+            </div>
+        </div>
 
-<body>
-    <input type="checkbox" id="use51"><label for="use51">Use 5.1 audio when available</label>
-    <br>
-    <input type="checkbox" id="setMaxBitrate"><label for="setMaxBitrate">Automatically select best bitrate available</label>
-    <br>
-    <input type="checkbox" id="disableVP9"><label for="disableVP9">Disable VP9 codec</label>
-    <br>
-    <input type="checkbox" id="disableAVChigh"><label for="disableAVChigh">Disable AVChigh codec</label>
-    <br>
-    <input type="checkbox" id="showAllSubs"><label for="showAllSubs">Show all subtitle tracks</label>
-
-    <div id="status"></div>
-    <button id="save">Save</button>
-
-    <script src="options.js"></script>
-</body>
-
+        <script src="options.js"></script>
+    </body>
 </html>
