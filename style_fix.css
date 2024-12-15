@@ -1,3 +1,7 @@
 .watch-video--selector-audio-subtitle {
-	overflow: auto;
+	overflow-y: auto;
+	color-scheme: dark;
+}
+.ltr-1d8v4z0 {
+	color-scheme: dark;
 }
