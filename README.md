@@ -1,13 +1,22 @@
-# netflix-1080p
-Chrome extension to play Netflix in 1080p and 5.1
+![logo](img/icon128.png)
+
+# New Netflix 1080p
+
+Chrome extension to play Netflix in 1080p and 5.1 as well as other QoL improvements.
 
 # Installation
+
+[Download the extension from the Chrome Webstore](https://chromewebstore.google.com/detail/new-netflix-1080p/mdlbikciddolbenfkgggdegphnhmnfcg)
+
+## Manual Installation
+
+If you can't or don't want to install the extension from the webstore, you can follow these steps:
 
 1. Go to the Releases section and download the latest .crx file
 2. Go to the Extensions settings of your Chrome browser and toggle "Developer Mode" in the upper right corner.
 3. Drag the downloaded .crx file into the Extensions window to install it
 
-# Installation (Windows)
+## Manual Installation (Windows)
 
 1. Go to the Releases section and download the latest release's source code as a zip file
 2. Unzip the file somewhere where you want to "install" it
