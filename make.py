@@ -8,7 +8,7 @@ OUTPUT_DIR = "dist"
 INCLUDE_FILES = [
     "img/*",
     "pages/*",
-    "cadmium-playercore-6.0047.826.911-patched.js",
+    "cadmium-playercore-6.0048.657.911-patched.js",
     "content_script.js",
     "manifest.json",
     "netflix_max_bitrate.js",
