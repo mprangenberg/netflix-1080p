@@ -17,7 +17,7 @@ function addSettingsToHtml(settings) {
     mainScript.id = "netflix-1080p-settings";
     document.documentElement.appendChild(mainScript);
 
-    console.log("Loaded settings");
+    console.log("Loaded settings", settings);
 }
 
 chromeStorageGet({
@@ -25,6 +25,7 @@ chromeStorageGet({
     setMaxBitrate: true,
     disableVP9: false,
     disableAVChigh: false,
+    disableAV1: false,
     showAllSubs: false,
 }).then(items => {
     addSettingsToHtml(items);
